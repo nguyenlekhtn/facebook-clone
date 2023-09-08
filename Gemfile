@@ -70,3 +70,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+eval_gemfile "gemfiles/rubocop.gemfile"
