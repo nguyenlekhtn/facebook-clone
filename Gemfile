@@ -72,3 +72,5 @@ group :test do
 end
 
 eval_gemfile "gemfiles/rubocop.gemfile"
+
+gem 'devise', github: 'heartcombo/devise'
