@@ -5,12 +5,15 @@ inherit_mode:
 require:
   - standard
   - standard-custom
+  - standard-performance
+  - rubocop-rails
   - rubocop-performance
 
 inherit_gem:
   standard: config/base.yml
   standard-performance: config/base.yml
   standard-custom: config/base.yml
+  standard-rails: config/base.yml
 
 inherit_from:
   - .rubocop/rails.yml
