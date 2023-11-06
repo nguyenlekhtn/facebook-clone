@@ -69,13 +69,13 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 6.0'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'factory_bot_rails'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
