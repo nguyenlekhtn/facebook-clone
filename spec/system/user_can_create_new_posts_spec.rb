@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'UserCanCreateNewPosts' do
-  before do
-    driven_by(:rack_test)
-  end
-
   let!(:user) { create(:user) }
 
   context 'when user create new post' do

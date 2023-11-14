@@ -176,6 +176,7 @@ GEM
       ast (~> 2.4.1)
       racc
     pg (1.5.4)
+    prism (0.17.1)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -279,6 +280,14 @@ GEM
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
+    ruby-lsp (0.12.3)
+      language_server-protocol (~> 3.17.0)
+      prism (>= 0.17.1, < 0.18)
+      sorbet-runtime (>= 0.5.5685)
+    ruby-lsp-rails (0.2.7)
+      rails (>= 6.0)
+      ruby-lsp (>= 0.12.0, < 0.13.0)
+      sorbet-runtime (>= 0.5.9897)
     ruby-progressbar (1.13.0)
     rubyzip (2.3.2)
     selenium-webdriver (4.10.0)
@@ -288,6 +297,7 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (5.3.0)
       activesupport (>= 5.2.0)
+    sorbet-runtime (0.5.11122)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -347,6 +357,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.19)
   rubocop-rails (~> 2.21)
   rubocop-rspec (~> 2.23)
+  ruby-lsp-rails
   selenium-webdriver
   shoulda-matchers (~> 5.0)
   sprockets-rails
