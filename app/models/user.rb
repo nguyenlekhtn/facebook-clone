@@ -4,5 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :follow_links
+
+  has_many :followings, through: :follow_links
+  has_many :followers, through: :follow_links
+
   validates :username, uniqueness: true
 end
