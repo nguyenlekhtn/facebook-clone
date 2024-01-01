@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.2'
+ruby '3.3.0'
 
 gem 'importmap-rails'
 gem 'jbuilder'
@@ -14,6 +14,7 @@ gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bootsnap', require: false
+gem 'devise', '~> 4.9'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
@@ -29,6 +30,7 @@ group :development do
   gem 'rubocop-rails', '~> 2.21', require: false
   gem 'rubocop-rspec', '~> 2.23', require: false
   gem 'ruby-lsp-rails'
+  gem 'solargraph'
   gem 'web-console'
 end
 
@@ -39,5 +41,3 @@ group :test do
   gem 'shoulda-matchers', '~> 5.0'
   gem 'webdrivers'
 end
-
-gem 'devise', github: 'heartcombo/devise'
