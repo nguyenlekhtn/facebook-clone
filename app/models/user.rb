@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :follow_links, dependent: :destroy
 
-  has_many :followings, through: :follow_links
+  has_many :followed_users, through: :follow_links
   has_many :followers, through: :follow_links
 
   validates :username, uniqueness: true, presence: true
