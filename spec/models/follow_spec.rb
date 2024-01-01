@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe Follow, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+RSpec.describe Follow do
+  it { is_expected.to validate_inclusion_of(:status).in_array(%w[requesting accepted]) }
 end
