@@ -10,17 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_30_053814) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_01_041213) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "follow_links", force: :cascade do |t|
-    t.bigint "follower_id"
-    t.bigint "following_id"
+  create_table "comments", force: :cascade do |t|
+    t.text "context"
+    t.bigint "post_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["follower_id"], name: "index_follow_links_on_follower_id"
-    t.index ["following_id"], name: "index_follow_links_on_following_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -45,7 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_30_053814) do
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 
-  add_foreign_key "follow_links", "users", column: "follower_id"
-  add_foreign_key "follow_links", "users", column: "following_id"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
   add_foreign_key "posts", "users", column: "author_id"
 end
