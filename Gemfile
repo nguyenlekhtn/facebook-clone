@@ -25,10 +25,10 @@ end
 
 group :development do
   gem 'guard'
-  gem 'rubocop', '~> 1.56', require: false
-  gem 'rubocop-performance', '~> 1.19', require: false
-  gem 'rubocop-rails', '~> 2.21', require: false
-  gem 'rubocop-rspec', '~> 2.23', require: false
+  gem 'rubocop', '~> 1.59', require: false
+  gem 'rubocop-performance', '~> 1.20', require: false
+  gem 'rubocop-rails', '~> 2.23', require: false
+  gem 'rubocop-rspec', '~> 2.26', require: false
   gem 'ruby-lsp-rails'
   gem 'solargraph'
   gem 'web-console'
@@ -37,6 +37,6 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 4.16'
   gem 'shoulda-matchers', '~> 5.0'
 end
